@@ -1,0 +1,639 @@
+/* --------------Font-Family ------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 02 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* Reseting Paddings & Margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --color-blue-white: #09c1f8;
+  --color-blue-dark: #0463ea;
+  --color-black: #1a1a1a;
+  --color-grey: #9198aa;
+  --color-white: #fff;
+}
+
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* BUTTONS */
+.btn {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(
+    to bottom,
+    var(--color-blue-white),
+    var(--color-blue-dark)
+  );
+  color: var(--color-white);
+  border-radius: 0.8rem;
+  padding: 1.6rem 3.6rem;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+/* -------------------------------- */
+/* -------- SECTION NAVBAR -------- */
+/* -------------------------------- */
+
+.section-navbar {
+  height: 9.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5.4rem;
+}
+
+/* Nav Logo */
+.nav-logo img {
+  height: 4.4rem;
+}
+
+/* Nav List */
+.nav-list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+.nav-list--items {
+  font-size: 1.6rem;
+  color: var(--color-grey);
+  cursor: pointer;
+}
+
+.nav-list--items:first-child {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+/* Nav BTN */
+.btn-nav {
+  background: var(--color-white);
+  color: var(--color-blue-white);
+  border: 0.2rem solid var(--color-blue-white);
+}
+
+/* -------------------------------- */
+/* -------- SECTION HEADER -------- */
+/* -------------------------------- */
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 9.8rem;
+  margin-top: 4.8rem;
+}
+
+.header-1,
+.header-2,
+.header-3 {
+  padding: 5.6rem 0;
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+/* ////////////// */
+/* Header Content */
+/* ////////////// */
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+/* Header Heading */
+.header-content .header-heading {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-transform: capitalize;
+}
+
+/* Header Description */
+.header-content .header-description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--color-grey);
+}
+
+/* Header BTN */
+.header-content .btn-header {
+  align-self: flex-start;
+}
+
+/* ///////////// */
+/* Header Image */
+/* //////////// */
+
+.header-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image .header-img {
+  height: 48rem;
+}
+
+/* Support Image */
+.support-img {
+  height: 68rem;
+}
+
+/* -------------------------------- */
+/* ------- SECTION SERVICES ------- */
+/* -------------------------------- */
+
+.section-services {
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+/* ///////////// */
+/* Services Top */
+/* //////////// */
+.services-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.services-top .services-heading {
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-transform: capitalize;
+}
+
+.services-top .services-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-grey);
+  line-height: 1.8;
+}
+
+/* /////////////// */
+/* Services Bottom */
+/* ////////////// */
+
+.services-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+/* Services */
+.services {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: flex-start;
+}
+
+/* Services logo */
+.services .services-logo img {
+  height: 4.8rem;
+}
+
+/* Services sub-heading */
+.services .services-sub--heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+/* Services sub-description */
+.services .services-sub--description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--color-grey);
+  padding-right: 4.8rem;
+}
+
+/* -------------------------------- */
+/* -------- SECTION CARDS --------- */
+/* -------------------------------- */
+
+.section-cards {
+  padding: 3.6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background: linear-gradient(
+    to bottom,
+    var(--color-blue-white),
+    var(--color-blue-dark)
+  );
+}
+
+/* Cards Heading */
+.section-cards .container .cards-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.8rem 0;
+  font-size: 3.6rem;
+  color: var(--color-white);
+}
+
+.section-cards .container .cards {
+  display: grid;
+  grid-template-columns: 35rem 35rem 35rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  margin: 0 5.6rem;
+  padding: 4.8rem 0;
+}
+
+.card {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.6rem;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Top */
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3.6rem;
+}
+
+.card-main .card-main--top {
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 1rem;
+}
+
+.card-main .card-main--top > .card-heading {
+  color: var(--color-white);
+}
+
+.card-top .card-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.card-top .card-description {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-grey);
+}
+
+/* Card Middle */
+
+.card-middle {
+  padding: 0 3.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.card-middle .card-details {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.card-middle .card-details img {
+  height: 2.8rem;
+}
+
+.card-middle .card-details .detail-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Card Bottom */
+.card-bottom {
+  padding: 3.6rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  text-align: center;
+}
+
+.card-bottom .card-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.card-bottom .card-pricing .price {
+  font-size: 3rem;
+  color: var(--color-black);
+}
+
+.card-bottom .card-pricing .price span {
+  color: var(--color-grey);
+}
+
+.card-bottom .card-pricing .cancel {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-grey);
+}
+
+.card-bottom .card-button .btn-cards {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--color-white);
+  border: 2px solid var(--color-blue-white);
+  color: var(--color-blue-white);
+  border-radius: 0.8rem;
+  padding: 1.6rem 3.6rem;
+  margin-left: 2rem;
+}
+
+/* -------------------------------- */
+/* ----- SECTION TESTIMONIALS ----- */
+/* -------------------------------- */
+
+.section-testimonials {
+  padding: 9.6rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* /////////////// */
+/* TESTIMONIAL TOP */
+/* /////////////// */
+
+.testimonials-top {
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.4rem;
+}
+
+/* Testimonial Heading */
+.testimonials-heading {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+/* Testimonial Description */
+.testimonials-description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-grey);
+  padding: 0 22.4rem;
+  line-height: 1.8;
+}
+
+/* ////////////////// */
+/* TESTIMONIAL BOTTOM */
+/* ///////////////// */
+.testimonials-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.4rem;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  margin: 0 1.2rem;
+  padding: 2.8rem;
+  box-shadow: 0 0 3px var(--color-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-black);
+  opacity: 0.8;
+  line-height: 2;
+}
+
+/* Testimonial User */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* User Image */
+.testimonial-user .user-image {
+  height: 3.6rem;
+  width: 3.6rem;
+  padding: 3.6rem;
+  border-radius: 50%;
+  background-color: var(--color-grey);
+  opacity: 0.5;
+}
+
+/* User Info */
+.testimonial-user .user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* User Name */
+.user-info .username {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* About User */
+.user-info .about-user {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* -------------------------------- */
+/* ----- SECTION REGISTRATION ----- */
+/* -------------------------------- */
+
+.section-registration {
+  margin: 4.8rem 0;
+  background: url(../assets/footer-bg.svg);
+  background-position: center;
+  background-size: cover;
+  padding: 9.8rem 0;
+}
+
+.registration {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+/* Registration Text */
+.registration-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* Registration Heading */
+.registration-heading {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  padding-right: 10rem;
+}
+
+/* Registration Description */
+.registration-description {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.8;
+  color: var(--color-white);
+  padding-right: 10rem;
+  opacity: 0.8;
+}
+
+/* Registration Button */
+.registration-button {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.registration-button .btn-registration {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1.5px solid var(--color-white);
+  border-radius: 1rem;
+  padding: 1.8rem 3.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* -------- SECTION FOOTER -------- */
+/* -------------------------------- */
+
+.section-footer {
+  padding: 9.8rem 0;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 3.6rem;
+  align-items: flex-start;
+}
+
+/* Footer Items */
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Footer Logo */
+.footer-item > .footer-logo {
+  align-self: flex-start;
+}
+
+/* Footer description */
+.footer-item > .footer-description {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-grey);
+  padding-right: 8.4rem;
+  line-height: 1.8;
+}
+
+/* Footer Headings */
+.footer-item .footer-heading {
+  font-size: 2.4rem;
+}
+
+/* Footer Lists */
+.footer-item .footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Footer List Items */
+.footer-item .footer-list li {
+  font-size: 1.4rem;
+  color: var(--color-grey);
+  cursor: pointer;
+}
+
+/* Footer Social Media List */
+.footer-item:last-child .footer-list {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Footer Social Media List items */
+.footer-item:last-child .footer-list li img {
+  height: 3rem;
+  cursor: pointer;
+}
