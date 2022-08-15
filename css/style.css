@@ -849,8 +849,13 @@ html {
 
   .section-cards .container .card,
   .section-cards .container .card-main {
-    /* align-items: center; */
     text-align: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .card:hover {
+    transform: none;
   }
 
   .testimonials-top {
