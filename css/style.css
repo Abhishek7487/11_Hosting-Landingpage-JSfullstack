@@ -57,8 +57,7 @@ html {
 
 /* CONTAINER */
 .container {
-  max-width: 130rem;
-  margin: 0 auto;
+  padding: 3.6rem 12.8rem;
 }
 
 /* -------------------------------- */
@@ -110,6 +109,10 @@ html {
   border: 0.2rem solid var(--color-blue-white);
 }
 
+.section-navbar .nav-icon {
+  display: none;
+}
+
 /* -------------------------------- */
 /* -------- SECTION HEADER -------- */
 /* -------------------------------- */
@@ -118,14 +121,15 @@ html {
   display: flex;
   flex-direction: column;
   gap: 9.8rem;
-  margin-top: 4.8rem;
+  /* margin-top: 4.8rem; */
 }
 
 .header-1,
 .header-2,
 .header-3 {
   padding: 5.6rem 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 3.6rem;
 }
@@ -166,18 +170,17 @@ html {
 /* //////////// */
 
 .header-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 }
 
 .header-image .header-img {
-  height: 48rem;
+  height: 100%;
+  width: 100%;
 }
 
 /* Support Image */
 .support-img {
-  height: 68rem;
+  width: 100%;
 }
 
 /* -------------------------------- */
@@ -284,11 +287,9 @@ html {
 
 .section-cards .container .cards {
   display: grid;
-  grid-template-columns: 35rem 35rem 35rem;
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2.4rem;
-  margin: 0 5.6rem;
   padding: 4.8rem 0;
 }
 
@@ -410,7 +411,6 @@ html {
 /* -------------------------------- */
 
 .section-testimonials {
-  padding: 9.6rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -516,14 +516,13 @@ html {
 /* -------------------------------- */
 
 .section-registration {
-  margin: 4.8rem 0;
   background: url(../assets/footer-bg.svg);
   background-position: center;
   background-size: cover;
-  padding: 9.8rem 0;
 }
 
 .registration {
+  padding: 4.6rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -541,7 +540,6 @@ html {
   font-size: 4.8rem;
   font-weight: 700;
   color: var(--color-white);
-  padding-right: 10rem;
 }
 
 /* Registration Description */
@@ -550,7 +548,6 @@ html {
   font-weight: 600;
   line-height: 1.8;
   color: var(--color-white);
-  padding-right: 10rem;
   opacity: 0.8;
 }
 
@@ -578,7 +575,6 @@ html {
 /* -------------------------------- */
 
 .section-footer {
-  padding: 9.8rem 0;
   display: grid;
   grid-template-columns: 2fr repeat(4, 1fr);
   gap: 3.6rem;
@@ -636,4 +632,244 @@ html {
 .footer-item:last-child .footer-list li img {
   height: 3rem;
   cursor: pointer;
+}
+
+/* ------------------------- MEDIA QUERIES -------------------------- */
+
+@media screen and (max-width: 1336px) {
+  html {
+    font-size: 58.5%;
+  }
+
+  .container {
+    padding: 3.6rem 5.6rem;
+  }
+
+  .section-header {
+    gap: 0;
+  }
+
+  .section-testimonials {
+    padding: 3.6rem 12.6rem;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  html {
+    font-size: 54.5%;
+  }
+
+  .container {
+    padding: 3.6rem 3.2rem;
+  }
+
+  .services-top {
+    gap: 0;
+  }
+
+  .services-top .services-heading {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 52%;
+  }
+
+  .nav-list {
+    flex-grow: 0;
+  }
+
+  .section-cards .container .cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2.4rem 8.6rem;
+    gap: 4.6rem;
+  }
+
+  .section-cards .container .cards .card:last-child {
+    display: flex;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .nav-list {
+    display: none;
+  }
+
+  .section-navbar .nav-icon {
+    display: block;
+    font-size: 3.6rem;
+  }
+
+  .header-1,
+  .header-2,
+  .header-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .header-image {
+    order: -1;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  .header-content .btn-header {
+    align-self: center;
+  }
+
+  .header-image {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .services-top {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    text-align: center;
+    padding: 0 4.8rem;
+  }
+
+  .services-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-cards .container .cards {
+    padding: 2.4rem 0;
+  }
+
+  .testimonials-description {
+    padding: 0;
+  }
+
+  .registration {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.4rem;
+  }
+
+  .registration-button {
+    justify-self: center;
+  }
+
+  .section-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-footer .footer-item:nth-child(2),
+  .section-footer .footer-item:nth-child(3),
+  .section-footer .footer-item:nth-child(4) {
+    display: none;
+  }
+  .section-footer .footer-item:nth-child(5) {
+    align-items: flex-end;
+  }
+
+  .footer-description {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .container {
+    padding: 3.6rem 1.8rem;
+  }
+
+  .btn-nav {
+    display: none;
+  }
+
+  .header-content {
+    gap: 2rem;
+  }
+
+  .header-image {
+    width: 80%;
+  }
+
+  .header-content .header-heading {
+    font-size: 2.6rem;
+  }
+
+  .header-content .header-description {
+    font-size: 1.3rem;
+  }
+
+  .services-top {
+    padding: 0;
+  }
+
+  .services-top .services-heading {
+    font-size: 3.6rem;
+  }
+
+  .services-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .services-bottom .services {
+    background-color: #ebebeb;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .services .services-sub--description {
+    padding: 0;
+  }
+
+  .services .services-sub--heading {
+    align-self: center;
+  }
+
+  .services .services-logo {
+    align-self: center;
+  }
+
+  .section-cards {
+    padding: 0;
+  }
+
+  .section-cards .container .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-cards .container .cards-heading {
+    font-size: 3.6rem;
+  }
+
+  .card-top,
+  .card-middle,
+  .card-bottom {
+    width: 100%;
+  }
+
+  .section-cards .container .card,
+  .section-cards .container .card-main {
+    /* align-items: center; */
+    text-align: center;
+  }
+
+  .testimonials-top {
+    padding: 4rem 1.6rem;
+  }
+
+  .testimonials-heading {
+    font-size: 3.6rem;
+  }
+
+  .testimonials-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-heading {
+    font-size: 3.6rem;
+  }
+
+  .footer-logo {
+    height: 4.6rem;
+  }
 }
